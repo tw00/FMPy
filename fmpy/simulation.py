@@ -66,6 +66,8 @@ class Recorder(object):
             row += self.fmu.getBoolean(vr=self.boolean_vrs)
 
         self.rows.append(tuple(row))
+        
+        // TODO TWE: write to stdout serialized
 
     def result(self):
         return np.array(self.rows, dtype=np.dtype(self.cols))
