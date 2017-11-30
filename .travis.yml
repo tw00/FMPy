@@ -5,7 +5,7 @@ python:
   - 3.6
 
 install:
-  - pip install lxml requests scipy pathlib dask[complete]
+  - pip install lxml==3.6.0  requests scipy pathlib dask[complete] pypiwin32
 
 script:
   - pip install .
