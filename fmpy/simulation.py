@@ -67,7 +67,7 @@ class Recorder(object):
 
         self.rows.append(tuple(row))
         
-        // TODO TWE: write to stdout serialized
+        # TODO TWE: write to stdout serialized
 
     def result(self):
         return np.array(self.rows, dtype=np.dtype(self.cols))
@@ -143,6 +143,8 @@ class Input(object):
 
         # find the left insert index
         i0 = np.searchsorted(t, time)
+        
+        # TODO TWE: get inputs from Redis instead + interpolate?
 
         # TODO: check for event
 
